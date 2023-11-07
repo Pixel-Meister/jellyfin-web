@@ -25,7 +25,7 @@ EOF
 fi
 
 # build deb
-dpkg-buildpackage -us -uc --pre-clean --post-clean
+dpkg-buildpackage -us -uc --pre-clean --post-clean -d
 
 mkdir -p ${ARTIFACT_DIR}
 mv ../jellyfin*.{deb,dsc,tar.gz,buildinfo,changes} ${ARTIFACT_DIR}
